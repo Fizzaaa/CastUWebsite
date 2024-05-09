@@ -1,0 +1,335 @@
+<html>
+<head>
+<title> Cast U</title>
+</head>
+<body >
+
+<!--header-->
+
+<table border="0" width="100%" cellspacing="10px" bgcolor="#FF9994">
+<tr>
+<td>
+     <table border="0" width="100% " align="center">
+     <tr>
+          <td align="center">
+              <a style="text-decoration: none" href="firstpg.html">
+                   <img src="Logo.jpg" width="120px">
+              </a>
+          </td>
+	
+          <td align="left">
+              <font face="Open Sans" size="10" color="Black">
+                  <b>Cast U</b>
+              </font>
+          </td>
+	
+          <td width="30%">
+              &nbsp
+          </td>
+	
+          <td align="center">
+              <a style="text-decoration: none" href="About Us.html">
+                   <font size="3"  color="Black">
+                        About <br>Us
+                   </font>
+              </a>
+          </td>
+	
+          <td align="center">
+              <a style="text-decoration: none" href="Explore.html">
+                   <font size="3" color="Black">
+                        Models
+                   </font>
+              </a>
+          </td>
+
+          <td align="center">
+              <a style="text-decoration: none" href="projects.html">
+                   <font size="3"color="Black">
+                        Projects <br> Available
+                   </font>
+              </a>
+          </td>
+
+          <td align="center">
+               <a style="text-decoration: none" href="Our Team.html">
+                   <font size="3" color="Black">
+                        Our <br> Team
+                   </font>
+              </a>
+          </td>
+
+          <td align="center">
+              <a style="text-decoration: none" href="Signup.html">
+                   <font size="3" color="Black">
+                        Sign Up
+                   </font>
+              </a>
+          </td>
+
+     </tr>
+     </table>
+</td>
+</tr>
+</table>
+
+<!--End Header-->
+
+<!--Body-->
+
+<script type="text/javascript">
+function validate_required(field,alerttxt)
+{
+     with (field)
+     {
+          if (value==null||value=="")
+               {alert(alerttxt);return false}
+          else {return true}
+     }
+}
+function validate_email(field,alerttxt)
+{
+     with (field)
+     {
+          apos=value.indexOf("@")
+          dotpos=value.lastIndexOf(".")
+          if (apos<1||dotpos-apos<2)
+               {alert(alerttxt);return false}
+          else {return true}
+     }
+}
+function validate_form(thisform)
+{
+     with (thisform)
+     {
+     if (validate_required(firstname,"First Name must be filled out!")==false)
+          {firstname.focus();return false}
+     else if (validate_required(lastname,"Last Name must be filled out!")==false)
+          {lastname.focus();return false}
+     else if (validate_required(contact,"Contact No must be filled out!")==false)
+          {contact.focus();return false}
+     else if (validate_required(email,"Email must be filled out!")==false)
+          {email.focus();return false}
+     else if (validate_email(email,"Not a valid e-mail address!")==false)
+          {email.focus();return false}
+     }
+}
+function contactmsg()
+{
+     alert("You Message has been Received. Our Team will look into it and contact you shortly.");
+}
+
+</script>
+
+<table border=0 width="100%" bgcolor="#fbefcc">
+<tr align="center">
+     <td width="20%">
+          &nbsp
+     </td>
+
+     <th colspan="2"> 
+          <font size="8">
+               Contact Us 
+          </font> 
+          <br>
+          <hr align="center" width="20%">
+     </th>
+
+     <td width="20%">
+          &nbsp
+     </td>
+</tr>
+
+<tr align=center>
+     <td width="20%">
+          &nbsp
+     </td>
+     
+     <td>
+          <form name="contactform" action="firstpg.html" onsubmit="return validate_form(this)"  method="post">
+          <table border=0 width="100%">
+          <tr>
+               <td width="30%">
+                    &nbsp
+               </td>
+
+               <td> 
+                    First Name: 
+                    <br><br>
+               </td>
+
+               <td> 
+                    <input type="text" name="firstname" placeholder="Your first name..">
+                    <br><br>
+               </td>
+
+               <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+
+          <tr>
+               <td width="30%">
+                    &nbsp
+               </td>
+
+               <td>
+                    Last Name:  
+                    <br><br>
+               </td>
+               
+               <td>
+                    <input type="text" name="lastname" placeholder="Your last name">
+                    <br><br>
+               </td>
+
+               <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+
+          <tr>
+               <td width="30%">
+                    &nbsp
+               </td>
+
+               <td>
+                    Contact: 
+                    <br><br>
+               </td>
+
+               <td>
+                    <input type="text" name="contact" placeholder="Your Contact Number..">
+                    <br><br>
+               </td>
+
+               <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+
+          <tr>
+               <td width="30%">
+                    &nbsp
+               </td>
+          
+               <td>
+                    Email: 
+                    <br><br>
+               </td>
+     
+               <td>
+                    <input type="text" name="email" placeholder="Your Email Id...">
+                    <br><br>
+               </td>
+     
+               <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+    
+          <tr>
+               <td width="30%">
+                    &nbsp
+               </td>
+     
+               <td>
+                    Message: 
+                    <br><br>
+               </td>
+     
+               <td>
+                    <textarea rows="5" cols="21" name="message" placeholder: "Your Message here...">
+                    </textarea>
+                    <br><br>
+               </td>
+     
+               <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+     
+          <tr align=center>
+               <td width="30%">
+                    &nbsp
+               </td>
+     
+               <td colspan="2">
+                    <input type="submit" value="Submit">
+               </td>
+
+                <td width="20%">
+                    &nbsp
+               </td>
+          </tr>
+          </table>
+          </form>
+     </td>
+</tr>
+</table>
+
+<hr width="100%" color=black>
+<!--End Body-->
+
+<!--Footer-->
+
+<table width="100%" bgcolor="#FF9994">
+<tr  align="center">
+<td>
+     <table border="0" width="100%" align="center" cellpadding="10px">
+     <tr align="center">
+
+          <td>
+               <img src="call.png" width="20%">
+                    <br><br>
+               <font size="4">
+                    <b>Call / Whatsapp:</b> 9724686642
+               </font>
+               <br>
+          </td>
+
+          <td>
+               <img src="email.png" width="20%">
+               <br><br>
+               <font size="4" >
+                    <b>Email Us:</b> Castu@gmail.com
+               </font>
+               <br>
+          </td>
+	
+          <td>
+               <img src="insta.png" width="35%">
+               <br><br>
+               <font size="4">
+                    <b>Instagram:</b> @Cast_U
+               </font>
+               <br>
+          </td>	
+
+          <td>
+               <img src="location.png" width="20%">
+               <br><br>
+               <font size="4">
+                    <b>Location: </b>Robert Sobukwe Rd, Bellville, 
+	    Cape Town, 7535, South Africa
+               </font>
+               <br>
+          </td>
+     </tr>
+     </table>
+</td>
+</tr>
+
+<tr align="center" bgcolor="black">
+     <td colspan="3">
+          <font color="#fff"> 
+               copyright@2023 | Cast "U" 
+          </font>
+     </td>
+</tr>
+</table>
+
+<!--End Footer-->
+
+</body>
+</html>
